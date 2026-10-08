@@ -86,7 +86,7 @@ src/gonzalez/fatima/pp/progii122/
 └── ExpedienteDuplicadoException.java
 ```
 
-El diagrama de clases está en [UML_PP_Defensa.pdf](UML_PP_Defensa.pdf).
+El diagrama de clases está en [UML_ArchicosSecretosX.pdf](UML_ArchicosSecretosX.pdf).
 
 ## Tecnologías
 
