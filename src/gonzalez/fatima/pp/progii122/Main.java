@@ -1,11 +1,12 @@
 package gonzalez.fatima.pp.progii122;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Main {
 
     public static void main(String[] args) {
-        ExpedientesSecretos archivo = new ExpedientesSecretos("Boveda 51");
+        ArchivoSecreto archivo = new ArchivoSecreto("Boveda 51");
         try {
             archivo.agregarExpediente(
                     new AvistamientoAereo("UAP-001", "Agente Fox", NivelSecreto.ALTO,
@@ -44,6 +45,7 @@ public class Main {
     }
 
     private static void mostrarExpedientes(List<Expediente> expedientes) {
+        Objects.requireNonNull(expedientes);
         StringBuilder sb = new StringBuilder();
         for (Expediente e : expedientes) {
             sb.append(e);
@@ -54,6 +56,7 @@ public class Main {
     }
 
     private static void analizarExpedientes(List<Expediente> expedientes) {
+        Objects.requireNonNull(expedientes);
         for (Expediente e : expedientes) {
             if (e instanceof Analizables a) {
                 System.out.println(a.analizar());
@@ -64,6 +67,7 @@ public class Main {
     }
 
     private static void generarReportes(List<Expediente> expedientes) {
+        Objects.requireNonNull(expedientes);
         for (Expediente e : expedientes) {
             if (e instanceof Reportables r) {
                 System.out.println(r.reportar());
